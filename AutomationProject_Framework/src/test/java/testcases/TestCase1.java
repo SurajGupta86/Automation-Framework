@@ -23,7 +23,7 @@ public class TestCase1 {
 		System.out.println("Login into the flipkart portal");
 	}
 	
-	@Test(priority=1)
+	@Test(priority=1, groups="Sanity")
 	public void Search() {
 		
 		System.out.println("Search for a smartphone");
@@ -31,7 +31,7 @@ public class TestCase1 {
 		AssertJUnit.assertEquals(true, true);
 	}
 	
-	@Test(priority=2, dependsOnMethods="Search")
+	@Test(priority=2, dependsOnMethods="Search", groups={"Sanity","Smoke"})
 	public void Buy() {
 		System.out.println("Search for a watch");
 		System.out.println("Purchase a watch");

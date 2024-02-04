@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 public class TestCaseAnnotations {
 
 	// Test Case 1
-	@Test
+	@Test(groups="Smoke")
 	public void test1() {
 	System.out.println("Test Case 1");
 	}// Test Case 2
