@@ -5,7 +5,7 @@
     <classes>
       <class name="testcases.assertClass">
         <methods>
-          <include name="softAssert"/>
+          <include name="softassert"/>
         </methods>
       </class> <!-- testcases.assertClass -->
     </classes>
