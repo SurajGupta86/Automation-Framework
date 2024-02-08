@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name=" Data Driven Suite">
+	
+	<!-- 
+	<groups>
+		<run>
+			<include name="Sanity"></include>
+		</run>
+	</groups>
+	 -->
+	<test thread-count="5" name="Base Class">
+		<classes>
+			<class name="basePackage.TestBase" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Email SignIn Test">
+		<classes>
+			<class name="testcases.EmailSignIn" />
+		</classes>
+	</test> <!-- Test -->
+	
+</suite> <!-- Suite -->

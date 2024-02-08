@@ -8,50 +8,14 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">113</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Annotation Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">37</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Assertion Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">9,706</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">9,856</th><th colspan="2"></th></tr>
+<tr><th colspan="8"> Data Driven Suite</th></tr>
+<tr><td><a href="#t0">Base Class</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Email SignIn Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,133</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">12,160</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testcases.TestCase1</td><td><a href="#m0">Buy</a></td><td rowspan="1">1707196952612</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m1">Search</a></td><td rowspan="1">1707196952568</td><td rowspan="1">36</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Annotation Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testcases.TestCaseAnnotations</td><td><a href="#m2">test1</a></td><td rowspan="1">1707196953175</td><td rowspan="1">4</td></tr><tr class="passedeven"><td><a href="#m3">test2</a></td><td rowspan="1">1707196953195</td><td rowspan="1">3</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Assertion Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testcases.assertClass</td><td><a href="#m4">softAssert</a></td><td rowspan="1">1707196953214</td><td rowspan="1">2548</td></tr><tr class="failedeven"><td><a href="#m5">softassert</a></td><td rowspan="1">1707196961203</td><td rowspan="1">1711</td></tr><tr><th colspan="4">Assertion Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testcases.assertClass</td><td><a href="#m6">Openbrowser</a></td><td rowspan="1">1707196955770</td><td rowspan="1">5284</td></tr><tr class="passedeven"><td><a href="#m7">verifytext</a></td><td rowspan="1">1707196961059</td><td rowspan="1">141</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4"> Data Driven Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Email SignIn Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.EmailSignIn</td><td><a href="#m0">Login</a></td><td rowspan="1">1707370329559</td><td rowspan="1">12099</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testcases.TestCase1#Buy</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testcases.TestCase1#Search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Annotation Test</h2><h3 id="m2">testcases.TestCaseAnnotations#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testcases.TestCaseAnnotations#test2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Assertion Test</h2><h3 id="m4">testcases.assertClass#softAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	did not expect [Most Reliable App &amp; Cross Browser Testing Platform | BrowserStack] but found [Most Reliable App &amp; Cross Browser Testing Platform | BrowserStack],
-	expected [null] but found [true],
-	First soft assert failed expected [true] but found [false],
-	Second soft assert failed expected [false] but found [true]
-	at testcases.assertClass.softAssert(assertClass.java:74)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testcases.assertClass#softassert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;h5&gt;...&lt;/h5&gt; is not clickable at point (141, 595). Other element would receive the click: &lt;div id=&quot;fixedban&quot; style=&quot;width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=121.0.6167.140)
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d2d92b0d50fe2e5eeb969b2f40570898, clickElement {id=817D28F3138B885434C1C6F4A61F82F8_element_28}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\SURAJG~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54670/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (d2d92b0d50fe2e5eeb969b2f40570898)] -&gt; xpath: //h5[text()=&apos;Elements&apos;]]
-Session ID: d2d92b0d50fe2e5eeb969b2f40570898
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at testcases.assertClass.softassert(assertClass.java:51)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testcases.assertClass#Openbrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testcases.assertClass#verifytext</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Base Class</h2><h2>Email SignIn Test</h2><h3 id="m0">testcases.EmailSignIn#Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
