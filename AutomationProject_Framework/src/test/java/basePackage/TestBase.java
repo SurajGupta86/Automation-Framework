@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,17 +18,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
-	//Creating a gloabla variables which is public and static that can be used through out the project.
+	//Creating a global variables which is public and static that can be used through out the project.
 	public static WebDriver driver;
 	public static Properties config = new Properties();   // Configuration properties file where the fields are stored which will be used in our script
 	public static Properties OR = new Properties();       //OR properties file where the locators of the particular fields are stored.
 	public static FileInputStream fis;                     // Used to read the input from the above files
+	public static Logger log = Logger.getLogger("TestBase.class");
+	//public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\ExcelData.xlsx");
 	
 	@BeforeSuite
 	public void SetUp() throws IOException {
 		
 		try {
 			fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\config.properties");
+			log.debug("Config File loaded");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,6 +41,7 @@ public class TestBase {
 		
 		try {
 			fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\OR.properties");
+			log.debug("OR File loaded");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -58,6 +63,7 @@ public class TestBase {
 			driver = new EdgeDriver();	      //Initializing the  edgedriver
 		}
 		driver.get(config.getProperty("url"));  //Opening the site on which we are going to do the testing
+		log.debug("URL reached"+config.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicitwait")), TimeUnit.MILLISECONDS);
 		
@@ -66,6 +72,7 @@ public class TestBase {
 	@AfterSuite
 	public void Close() {
 		driver.quit();
+		log.debug("execution successful");
 	}
 	
 }
