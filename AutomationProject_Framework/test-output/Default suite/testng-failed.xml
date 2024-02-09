@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.assertClass">
+      <class name="testcases.TestClassSkip">
         <methods>
-          <include name="softassert"/>
+          <include name="isskip"/>
         </methods>
-      </class> <!-- testcases.assertClass -->
+      </class> <!-- testcases.TestClassSkip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
