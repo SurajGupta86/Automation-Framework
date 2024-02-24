@@ -73,6 +73,7 @@ public class TestBase {
 	public void Close() {
 		driver.quit();
 		log.debug("execution successful");
+		
 	}
 	
 }
